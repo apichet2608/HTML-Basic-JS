@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <script src="./script.js"></script>
+    <title>Discord Clone</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Server sidebar -->
+        <div class="servers-sidebar">
+            <div class="server-icon home-icon">
+                <i class="fa-brands fa-discord"></i>
+            </div>
+            <div class="server-divider"></div>
+            <div class="server-icon active">
+                <span>GS</span>
+            </div>
+            <div class="server-icon">
+                <span>JS</span>
+            </div>
+            <div class="server-icon">
+                <span>PY</span>
+            </div>
+            <div class="server-icon">
+                <span>RB</span>
+            </div>
+            <div class="server-icon add-server">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="server-icon explore">
+                <i class="fa-solid fa-compass"></i>
+            </div>
+        </div>
+
+        <!-- Channels sidebar -->
+        <div class="channels-sidebar">
+            <div class="server-header">
+                <h3>Gaming Server</h3>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="channels-container">
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <span>TEXT CHANNELS</span>
+                    </div>
+                    <div class="channel active">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <span>general</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <span>memes</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <span>gaming-news</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <span>VOICE CHANNELS</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>General Voice</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>Gaming Lounge</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>AFK</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-controls">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="user-details">
+                        <span class="username">Username</span>
+                        <span class="user-tag">#1234</span>
+                    </div>
+                </div>
+                <div class="user-actions">
+                    <i class="fa-solid fa-microphone"></i>
+                    <i class="fa-solid fa-headphones"></i>
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main chat area -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>general</span>
+                </div>
+                <div class="chat-header-right">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fa-solid fa-thumbtack"></i>
+                    <i class="fa-solid fa-user-group"></i>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                    <i class="fa-solid fa-inbox"></i>
+                    <i class="fa-solid fa-question-circle"></i>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added dynamically via JavaScript -->
+            </div>
+
+            <div class="message-input-container">
+                <div class="message-input-wrapper">
+                    <button class="attachment-btn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <input type="text" id="messageInput" placeholder="Message #general">
+                    <div class="message-actions">
+                        <i class="fa-solid fa-gift"></i>
+                        <i class="fa-solid fa-face-smile"></i>
+                        <i class="fa-solid fa-paper-plane" id="sendMessage"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Members sidebar -->
+        <div class="members-sidebar">
+            <div class="member-category">
+                <h3>ONLINE — 4</h3>
+                <div class="member">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/32" alt="Member Avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <span class="member-name">Server Admin</span>
+                </div>
+                <div class="member">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/32/0088cc" alt="Member Avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <span class="member-name">Gamer123</span>
+                </div>
+                <div class="member">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/32/cc0088" alt="Member Avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <span class="member-name">CodeNinja</span>
+                </div>
+                <div class="member">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/32/00cc88" alt="Member Avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <span class="member-name">PixelArtist</span>
+                </div>
+            </div>
+
+            <div class="member-category">
+                <h3>OFFLINE — 2</h3>
+                <div class="member offline">
+                    <div class="member-avatar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6858/6858485.png" alt="Member Avatar">
+                        <span class="status-indicator offline"></span>
+                    </div>
+                    <span class="member-name">SleepyDev</span>
+                </div>
+                <div class="member offline">
+                    <div class="member-avatar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6858/6858485.png" alt="Member Avatar">
+                        <span class="status-indicator offline"></span>
+                    </div>
+                    <span class="member-name">BusyBee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
